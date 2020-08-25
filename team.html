@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCBU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    body{
+        margin:8px;
+    }
+    .navbar{
+        margin-left: 3vw;
+        margin-top: 80px;
+        font-size: 1.7vw;
+
+    }
+
+    .navbar ul{
+        overflow: auto;
+    }
+    .navbar li{
+        float: left;
+        list-style: none;
+        
+    }
+    .navbar a{
+        padding: 0px 2vw;
+        text-decoration: none;
+    }
+    a:active,a:hover{
+        color: #EE4C3B;
+        font-weight: bold;
+    }
+    
+    .small{
+        font-size: 25px;
+    }
+    .basic{
+        background: #3131A9 0% 0% no-repeat padding-box;
+        font-size: 18px;
+        color: white;
+        border: none;
+        padding: 7px 17px;
+        opacity: 0.6;
+
+    }
+    .basic:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+    .up{
+        background-image: url(/assets/images/try.png);
+        background-position: right;
+        background-size: 43vw 53vw;
+        background-repeat: no-repeat;
+    }
+    #about{
+        margin-left: 50px;
+    }
+    .content{
+        width:100%;
+        font-size: 18px;;
+    }
+    .round{
+        width: 20vw;
+        height:20vw;
+        background-color:#EE4C3B ;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 5vw;
+        color:white;
+    }
+    m{
+        font-size: 5.3vw;
+    }
+    l{
+        font-size: 1.7vw;
+    }
+    .icons{
+        padding: 30px;
+        color: black;
+    }
+    
+
+
+
+
+
+    .navbar .icon {
+  display: none;
+}
+
+
+.centered {
+  opacity: 0;
+  position: absolute;
+  top :50%;
+  left: 50%;
+  font-size: 2.2vw;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-weight: bold;
+}
+
+.card:hover .centered{
+  opacity: 1;
+  color: black;
+  cursor: pointer;
+}
+
+.card:hover .card-img-top{
+  opacity: 0.3;
+  cursor: pointer;
+}
+  
+
+    .team-member{margin-bottom:50px;text-align:center}
+    .team-member img{width:225px;height:225px;border:7px solid #fff}
+    .team-member h4{margin-top:25px;margin-bottom:0;text-transform:none}
+    .team-member p{margin-top:0}
+
+    
+
+</style>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <img src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a href="/index.html" style="color:black; " onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'" >Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/about.html" style="color: black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">About Us</a>
+                </li><li class="nav-item active">
+                    <a href="/projects.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">Projects</a>
+                </li><li class="nav-item active">
+                    <a href="/blogs.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">Blogs</a>
+                </li><li class="nav-item active">
+                    <a href="/team.html" style="color:#EE4C3B; font-weight: bold;"  >Our Team</a>
+                </li><li class="nav-item active">
+                    <a href="/contact.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">Contact Us</a>
+                </li>
+              </ul>
+    
+              
+            </div>
+          </nav>
+
+
+
+    </header>
+    <br>
+    <br>
+    <section id="team" class="text">
+        <center>
+        <div class="container">
+            <h1 style="font-size: 45px; color:#EE4C3B">Our Team</h1><br><br><br>
+            <h2 class="text-uppercase text-center" style="margin-bottom: 32px;">Core</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Devansh Savani</h4>
+                        <p class="text-muted">IPP</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Anuj Mehta</h4>
+                        <p class="text-muted">President</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Jaini Dedhia</h4>
+                        <p class="text-muted">SAA</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Jash Valia</h4>
+                        <p class="text-muted">VP Support Functions</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manali Visaria</h4>
+                        <p class="text-muted">VP Main Avenues</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manav Shah</h4>
+                        <p class="text-muted">Treasurer</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Animesh Mehta</h4>
+                        <p class="text-muted">Club Advisor</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Salma Pachmariwala</h4>
+                        <p class="text-muted">Secretary</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manav Shah</h4>
+                        <p class="text-muted">HRD</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Devansh Savani</h4>
+                        <p class="text-muted">HRD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team"  style="padding-top: 16px;">
+        <div class="container">
+            <h2 class="text-uppercase text-center" style="margin-bottom: 32px;">board of directors</h2>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Diksha Jindal</h4>
+                        <p class="text-muted">ED Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Akshat Jain</h4>
+                        <p class="text-muted">Digital Communications Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Dimple Nathani</h4>
+                        <p class="text-muted">Community Service Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Jeet Shah</h4>
+                        <p class="text-muted">PIS Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Parth Nathani</h4>
+                        <p class="text-muted">PIS Director</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manmeet Oberoi</h4>
+                        <p class="text-muted">International Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Suresh Hotwani</h4>
+                        <p class="text-muted">International Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Daksh Darji</h4>
+                        <p class="text-muted">Sports Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Sagar Gaba</h4>
+                        <p class="text-muted">Professional Development Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manav Shah</h4>
+                        <p class="text-muted">Professional Development Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Khushboo Shah</h4>
+                        <p class="text-muted">Club Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Salma Pachmariwala</h4>
+                        <p class="text-muted">Editorial Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Yanaisha Moos</h4>
+                        <p class="text-muted">PR, Marketing &amp; Social Media Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manmeet Oberoi</h4>
+                        <p class="text-muted">International Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Suresh Hotwani</h4>
+                        <p class="text-muted">International Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Daksh Darji</h4>
+                        <p class="text-muted">Sports Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Sagar Gaba</h4>
+                        <p class="text-muted">Professional Development Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Manav Shah</h4>
+                        <p class="text-muted">Professional Development Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Khushboo Shah</h4>
+                        <p class="text-muted">Club Service Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Salma Pachmariwala</h4>
+                        <p class="text-muted">Editorial Director</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/images/lahs.png">
+                        <h4>Yanaisha Moos</h4>
+                        <p class="text-muted">PR, Marketing &amp; Social Media Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    </section>
+
+
+
+<footer style="background-color: lightgray;">
+    <center>
+    
+    <a href="https://www.facebook.com/bombayuptown"><i class="fa fa-facebook-square fa-2x icons" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/rcbombayuptown/"><i class="fa fa-instagram fa-2x icons" aria-hidden="true"></i></a>
+    <a href="https://www.youtube.com/channel/UCpV8mbvGvSaoftkQdNsr7Bg"><i class="fa fa-youtube-play fa-2x icons" aria-hidden="true"></i></a>
+    <br>
+
+    ©All rights reserved, RCBU, 2020-21
+    <br>
+    <br>
+</center>
+
+</footer>
+
+</body>

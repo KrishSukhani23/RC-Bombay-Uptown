@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCBU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body{
+        margin:8px;
+    }
+    .navbar{
+        margin-left: 3vw;
+        margin-top: 1vw;
+        font-size: 1.7vw;
+
+    }
+    .navbar ul{
+        overflow: auto;
+    }
+    .navbar li{
+        float: left;
+        list-style: none;
+        
+    }
+    .navbar a{
+        padding: 0px 2vw;
+        text-decoration: none;
+    }
+    a:active,a:hover{
+        color: #EE4C3B;
+        font-weight: bold;
+    }
+    .container{
+            margin-top: 15vw;
+            margin-left: 50px;
+            font-size: 3vw;
+    }
+    .container p{
+        line-height: 1;
+    }
+    .small{
+        font-size: 25px;
+    }
+    .basic{
+        background: #3131A9 0% 0% no-repeat padding-box;
+        font-size: 18px;
+        color: white;
+        border: none;
+        padding: 7px 17px;
+        opacity: 0.6;
+
+    }
+    .basic:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+    .up{
+        background-image: url(/assets/images/try.png);
+        background-position: right;
+        background-size: 43vw 53vw;
+        background-repeat: no-repeat;
+    }
+    #about{
+        margin-left: 50px;
+    }
+    .content{
+        width:100%;
+        font-size: 18px;;
+    }
+    .round{
+        width: 20vw;
+        height:20vw;
+        background-color:#EE4C3B ;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 5vw;
+        color:white;
+    }
+    @media (max-width: 752px) {
+      .round{
+        width: 25vw;
+        height:25vw;
+        background-color:#EE4C3B ;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 2vw 30vw;
+        color:white;
+        line-height: 1.5;
+    }
+    .container{
+      margin-left: auto;
+    }
+    
+}
+
+
+
+    m{
+        font-size: 5.3vw;
+    }
+    l{
+        font-size: 1.7vw;
+    }
+    .icons{
+        padding: 30px;
+        color: black;
+    }
+    @media (max-width: 555px) {
+      .round{
+        width: 25vw;
+        height:25vw;
+        background-color:#EE4C3B ;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 2vw 30vw;
+        color:white;
+        line-height: 1.3;
+        
+    }
+    m{
+        font-size: 6.3vw;
+    }
+    l{
+        font-size: 2.2vw;
+    }
+    
+    
+}
+
+@media (max-width: 490px) {
+      .round{
+        width: 35vw;
+        height:35vw;
+        background-color:#EE4C3B ;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 2vw 30vw;
+        color:white;
+        line-height: 1.3;
+        
+    }
+    m{
+        font-size: 7.3vw;
+    }
+    l{
+        font-size: 3.2vw;
+    }
+    #about{
+      margin :15px;
+    }
+    
+    
+}
+
+
+
+
+
+
+    .navbar .icon {
+  display: none;
+}
+
+
+.centered {
+  opacity: 0;
+  position: absolute;
+  top :50%;
+  left: 50%;
+  font-size: 2.2vw;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-weight: bold;
+}
+
+.card:hover .centered{
+  opacity: 1;
+  color: black;
+  cursor: pointer;
+}
+
+.card:hover .card-img-top{
+  opacity: 0.3;
+  cursor: pointer;
+}
+  
+
+
+
+.aboutpicstyle{
+  width: 20vw; height: 20vw; float: right;margin: 0 2vw; 
+}
+
+
+@media (max-width: 1190px) {
+  .aboutpicstyle{
+  width: 30vw; height: 30vw; float: right;margin: 0 2vw;
+}
+}
+@media (max-width: 915px) {
+  .aboutpicstyle{
+  width: 40vw; height: 40vw; float: right;margin: 0 2vw;
+}
+}
+@media (max-width: 690px) {
+  .aboutpicstyle{
+  width: 85vw; height: 85vw; float: right;margin: 4vw 4vw;
+}
+        
+        
+    }
+
+    @media (max-width: 991px) {
+      .up{
+        background-image: none;
+      }
+      .container{
+        text-align: center;
+        font-size: 7vw;
+      }
+    }
+    @media (max-width: 550px) {
+      #about{
+        text-align: center;
+      }
+    }
+
+.modal-header{
+  text-align: center;
+}
+</style>
+<body>
+    <section class="up">
+        <br>
+        <br>
+        <header>
+            
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <img src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+            
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-3 mt-2 mr-17 mt-lg-0">
+                  <li class="nav-item active">
+                    <a href="/index.html" style="color:#EE4C3B; font-weight: bold;" >Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a href="/about.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">About Us</a>
+                  </li><li class="nav-item active">
+                      <a href="/projects.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">Projects</a>
+                  </li><li class="nav-item active">
+                      <a href="/blogs.html" style="color:black;" onMouseOver="this.style.color='#EE4C3B'" onMouseOut="this.style.color='black'">Blogs</a>
+                  </li><li class="nav-item active">
+                    <a href="/team.html" style="color:white;" >Our Team</a>
+                  </li><li class="nav-item active">
+                    <a href="/contact.html" style="color:white;" >Contact Us</a>
+                  </li>
+                </ul>
+      
+                
+              </div>
+            </nav>
+    
+    
+    
+        </header>
+    
+        <div class="container">
+            <p class="uppara">Join The</p> 
+            <p class="uppara" style = "color:#EE4C3B">Rotaract Club Of Bombay Uptown</p>
+            <p  class="small uppara">And aim for the stars</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB8vpqo7Tx7-I4UsLtacEouKqiMvZiUMf3SdsW-bYrfJWV0A/viewform">
+            <button class="basic uppara">
+                Join Today
+            </button>
+          </a>
+    
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <br>
+
+    </section>
+
+    <section id="about">
+        <h1 style="font-size: 45px; color:#EE4C3B">About</h1>
+        <br>
+        <br>
+        <div>
+          <img class="aboutpicstyle" src="/assets/images/aboutpic.jpg" alt=""></img>
+        <p class="content">
+          
+            We take Immense pride in introducing ourselves as the Rotaract Club Of Bombay Uptown One of the most active clubs in Rotaract District 3141. 
+            While we firmly act on our Motto, Dream | Believe | Achieve, we passionately support the belief of self service by service of others. 
+            At RCBU we create a vibrant and enthusiastic environment to ensure the personal growth of all our members. 
+            We are based in Mumbai, Wadala but we do activities all across city and other Rotaract Clubs throughout the world.
+
+            We take Immense pride in introducing ourselves as the Rotaract Club Of Bombay Uptown One of the most active clubs in Rotaract District 3141. 
+            While we firmly act on our Motto, Dream | Believe | Achieve, we passionately support the belief of self service by service of others. 
+            At RCBU we create a vibrant and enthusiastic environment to ensure the personal growth of all our members. 
+            </p>
+          </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
+        <div class="round">
+            <br>
+            <center>
+            <m >13<br></m>
+            <l>Years in the <br>
+            Rotaract Movement</l>
+            </center>
+
+        </div>
+        <div class="round">
+            <br>
+            <center>
+               <m> 2<sup>nd</sup></m><br>
+                <l>Best Community Club<br>
+                in Mumbai</l>
+            </center>
+
+        </div>
+        <div class="round">
+            <center>
+                <br>
+                <m>7<sup>th</sup></m><br>
+                <l>District 3141 <br>
+                Ranking</l>
+            </center>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>
+    
+    
+    <section id="projects">
+        <center><h1 style="font-size:45px; color:#EE4C3B">Our Projects</h1></center>
+        <center>
+            <p style="font-size: 20px;">
+                Every year we do a set of huge projects these are a few glimpses of our best Mega projects
+            </p>
+
+
+        <div class="card-deck" style="width: 70vw; position: relative;">
+            <div class="card" style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/bp.png" alt="Card image cap" data-toggle="modal" data-target="#bp" >
+              <div class="centered">Building Picasso</div>
+
+  
+            </div>
+            <div class="card"style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/ilit.png" alt="Card image cap" data-toggle="modal" data-target="#ilit">
+                            <div class="centered">I-lit</div>
+
+  
+            </div>
+            <div class="card"style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/hope.png" alt="Card image cap" data-toggle="modal" data-target="#hope">
+                            <div class="centered">HOPE</div>
+
+  
+            </div>
+          </div>
+        <br>
+        <br>
+          <div class="card-deck" style="width: 70vw;">
+            <div class="card"style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/neev.png" alt="Card image cap" data-toggle="modal" data-target="#neev">
+                            <div class="centered">NEEV</div>
+
+  
+            </div>
+            <div class="card"style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/wdd.png" alt="Card image cap" data-toggle="modal" data-target="#wdd">
+                            <div class="centered">World Disability Day</div>
+
+  
+            </div>
+            <div class="card"style=" position: relative;">
+              <img class="card-img-top" src="/assets/images/touch.png" alt="Card image cap" data-toggle="modal" data-target="#touch">
+                            <div class="centered">The Touch</div>
+
+  
+            </div>
+          </div>
+          <br>
+          <a href="/projects.html">
+          <button class="basic">
+            View All
+        </button>
+      </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+        <div class="modal fade" id="bp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Building Picasso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/bp.png" alt="Card image cap" >
+                <br>
+                <br>
+                A drawing competition like none other, Building
+                Picasso brings out the creativity and the artistic flair of over 900 children
+                of grades Jr. KG through 8 from schools all over Mumbai.
+                <br>
+                <b>Date</b>: 27th January 2019 <br>
+                <b>Venue</b>: RSC Wadala <br>
+                <b>Avenue</b>: Club Service
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="ilit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">I-Lit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/ilit.png" alt="Card image cap" >
+                <br>
+                <br>
+                We at RCBU give Literacy paramount importance
+                and to lead the crusade, we have I-Lit. A literature festival for children of
+                schools, NGOs, orphanages and backward communities where we spread the message
+                of literacy through literature and instil in young minds to take up literature
+                through unconventional ways.
+                <br>
+                <b>Date</b>: Year Round <br>
+                <b>Venue</b>: N/A <br>
+                <b>Avenue</b>: PD & PIS
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="modal fade" id="hope" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">HOPE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/hope.png" alt="Card image cap" >
+                <br>
+                <br>
+                CANCER IS GOING TO BE ONLY A STORY, NOT YOUR WHOLE LIFE.
+                With our legacy project HOPE, which is a fight against Cancer. We, The Rotaract Club of Bombay Uptown supports the Fighters, admire the Survivors, honored the Taken, and never give up HOPE.
+                ~Stay tuned for more details.
+                <br>
+                <b>Date</b>: Year Round <br>
+                <b>Venue</b>: N/A<br>
+                <b>Avenue</b>: PR COM Serve
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="modal fade" id="neev" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NEEV</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/neev.png" alt="Card image cap" >
+                <br>
+                <br>
+                Along with our Rotary Club, we host a 3 day fair
+                for amputees where each one is provided a personalised Jaipur foot or arm,
+                wheelchairs, crutches and more, absolutely free of cost! With beneficiaries
+                from children to elderly, from pan India, coming down to get a new hope of
+                life, this event changes the life of people, forever.
+                <br>
+                <b>Date</b>: April <br>
+                <b>Venue</b>: RSC Wadala <br>
+                <b>Avenue</b>: COM Serve, PIS
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="modal fade" id="wdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">World Disability Day</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/wdd.png" alt="Card image cap" >
+                <br>
+                <br>
+                To celebrate World Disability Day, we organise
+                a cultural fiesta for specially abled children and young adults. The day starts
+                with a rally and ends with fabulous performances by the specially abled,
+                showcasing different cultures.
+                <br>
+                <b>Date</b>: December <br>
+                <b>Venue</b>: RSC Wadala <br>
+                <b>Avenue</b>: IS, PIS
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="touch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">The TOUCH</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <br>
+                <img class="card-img-top" src="/assets/images/touch.png" alt="Card image cap" >
+                <br>
+                <br>
+                Focussing on women empowerment, we target young
+                girls across schools and slums to make them aware about the difference between
+                good touch and bad touch. Imparting this essential difference goes onto help
+                them a long way ahead in their lives.
+                <br>
+                <b>Date</b>: Year Round <br>
+                <b>Venue</b>: Multiple <br>
+                <b>Avenue</b>: COM Serve
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary justify-content-center" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </center>
+    </section>
+
+    <section>
+      <center><h1 style="font-size: 50px; color:#EE4C3B">Our PIS</h1></center>
+      <center>
+        <br><br><br>
+        <img src="/assets/images/ri.png" alt=""><br><br><br><br><br>
+        <img src="/assets/images/lahs.png" alt=""><br><br><br><br>
+        <img src="/assets/images/nkes.png" alt=""><br><br><br>
+      </center>
+
+    </section>
+
+    <footer style="background-color: lightgray;">
+        <center>
+        
+        <a href="https://www.facebook.com/bombayuptown"><i class="fa fa-facebook-square fa-2x icons" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/rcbombayuptown/"><i class="fa fa-instagram fa-2x icons" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCpV8mbvGvSaoftkQdNsr7Bg"><i class="fa fa-youtube-play fa-2x icons" aria-hidden="true"></i></a>
+        <br>
+
+        ©All rights reserved, RCBU, 2020-21
+        <br>
+        <br>
+    </center>
+
+    </footer>
+    
+
+</body>
+
+
+</html>
