@@ -106,6 +106,11 @@ display: none;
 }
 
 
+.card{
+  margin-left:40px;
+}
+
+
 .centered {
 opacity: 0;
 position: absolute;
@@ -151,6 +156,71 @@ cursor: pointer;
     margin: 5vw;
 }
 
+@media (max-width: 915px) {
+  .aboutpicstyle{
+  width: 40vw; height: 40vw; float: right;margin: 0 2vw;
+}
+}
+@media (max-width: 690px) {
+  .aboutpicstyle{
+  width: 85vw; height: 85vw; float: right;margin: 4vw 4vw;
+
+}
+
+.card{
+  margin:auto;
+}
+
+.logoimg{
+        margin-left: 20px;
+      }
+        
+        
+    }
+
+    @media (max-width: 991px) {
+      .up{
+        background-image: none;
+      }
+      .container{
+        text-align: center;
+        font-size: 7vw;
+      }
+      .nav-item{
+        font-size: 2.5vw;
+      }
+      .logoimg{
+        margin-left: 30px;
+      }
+    }
+    @media (max-width: 550px) {
+      #about{
+        text-align: center;
+      }
+      .nav-item{
+        font-size: 3.5vw;
+      }
+      .logoimg{
+        margin-left: 15px;
+      }
+    }
+
+    @media (max-width: 415px) {
+      
+      .nav-item{
+        font-size: 4.5vw;
+      }
+      .logoimg{
+        margin-left: 18px;
+      }
+    }
+
+.modal-header{
+  text-align: center;
+}
+
+
+
 
 </style>
 
@@ -160,7 +230,7 @@ cursor: pointer;
   <header>
 
     <nav class="navbar navbar-expand-lg navbar-light ">
-      <img src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
+      <img class="logoimg" src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -201,12 +271,11 @@ cursor: pointer;
   <div class="card-deck">
     
     </div>
-    <div class="card border-info ml-5 mb-5" style="width: 18rem;">
+    <div class="card border-info mb-5" style="width: 18rem;">
       <a href="/blog1.html"><img class="card-img-top" src="/assets/images/blog1.jpg" alt="Card image cap"></a>
       <div class="card-body">
         <h5 class="card-title">FOODILICIOUS FASHION SHOW</h5>
         <p class="card-text">We have a real treat for you today! In just a few moments you will get a chance to see us displaying some of the hottest dishes from the world! This blog isn't all about looking good though. Today we will be taking you behind the scenes of your favourite food items. 
-          So please get comfortable, and read deliciously because you don't want to miss a moment of our upcoming presentation.
           </p>
       </div>
       <div class="card-footer">

@@ -41,7 +41,7 @@
   }
   .container{
           margin-top: 15vw;
-          margin-left: 50px;
+          margin-left: auto;
           font-size: 3vw;
   }
   .container p{
@@ -169,6 +169,82 @@ k  a:hover{
   border: none;
 }
 */
+
+@media (max-width: 915px) {
+  .aboutpicstyle{
+  width: 40vw; height: 40vw; float: right;margin: 0 2vw;
+}
+}
+@media (max-width: 690px) {
+  .aboutpicstyle{
+  width: 85vw; height: 85vw; float: right;margin: 4vw 4vw;
+}
+
+.logoimg{
+        margin-left: 20px;
+      }
+        
+        
+    }
+
+    @media (max-width: 991px) {
+      .up{
+        background-image: none;
+      }
+      .container{
+        text-align: center;
+        font-size: 7vw;
+      }
+      .nav-item{
+        font-size: 2.5vw;
+      }
+      .logoimg{
+        margin-left: 30px;
+      }
+    }
+    @media (max-width: 550px) {
+      #about{
+        text-align: center;
+      }
+      .nav-item{
+        font-size: 3.5vw;
+      }
+      .logoimg{
+        margin-left: 15px;
+      }
+    }
+
+    @media (max-width: 415px) {
+      
+      .nav-item{
+        font-size: 4.5vw;
+      }
+      .logoimg{
+        margin-left: 18px;
+      }
+    }
+
+.modal-header{
+  text-align: center;
+}
+
+@media (max-width: 1330px) {
+      
+      .responsive-iframe{
+          display: none;
+      }
+      .container{
+          justify-content: center;
+          text-align: center;
+      }
+    }
+
+    @media (min-width: 1330px) {
+      
+      .basic{
+          display: none;
+      }
+    }
 </style>
 
 
@@ -178,7 +254,7 @@ k  a:hover{
     
 
     <nav class="navbar navbar-expand-lg navbar-light ">
-        <img src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
+        <img class="logoimg" src="/assets/images/logo.png" alt="RCBU" style="height: 60px; width: 55px;  margin-right: 15vw;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -217,7 +293,13 @@ k  a:hover{
             <p class="small">Fill the form and our team will connect with you!</p>
             <h3>OR</h3>
             <k><i class="fa fa-phone icon" aria-hidden="true"> <a href="tel: 9819686640">+91 9819686640</a></i></k>
-            <br><br><br><br><br><br><br><br>
+            
+            <br><br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmXxg5rzvlmbj95bmXzQ7fjQ6nh6lgOV0Knytuf6D-2Yaruw/viewform?embedded=true">
+                <button class="basic uppara">
+                    Contact Us
+                </button>
+              </a><br><br><br><br><br><br>
 
 
         </div>
